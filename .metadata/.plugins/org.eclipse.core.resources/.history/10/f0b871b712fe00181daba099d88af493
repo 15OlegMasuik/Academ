@@ -1,0 +1,55 @@
+package mate.academy;
+
+import java.util.Scanner;
+
+public class PowerBlock {
+	int inputVoltage;
+	int outputVoltage1;
+	int outputVoltage2;
+	boolean status = false;
+
+	void getVoltage() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("InputVoltage:");
+		if (sc.hasNextInt()) {
+			inputVoltage = sc.nextInt();
+		}
+
+		else {
+			System.out.println("Input number Voltage:");
+
+		}
+
+	}
+
+	void blockOn() {
+		if ((inputVoltage >= 200) && (inputVoltage <= 250)) {
+			status = true;
+			outputVoltage1 = 5;
+			outputVoltage2 = 12;
+		}
+
+	}
+
+	void blockOff() {
+		status = false;
+		outputVoltage1 = 0;
+		outputVoltage2 = 0;
+	}
+
+	void info() {
+		if (inputVoltage < 200) {
+			System.out.println("status: " + (status ? "ON" : "OFF") + " OutputVoltage1: " + outputVoltage1
+					+ " OnputVoltage2: " + outputVoltage2 + " IutputVoltage: " + inputVoltage +"Low voltage");
+	
+		} else if (inputVoltage > 250) {
+			System.out.println("status: " + (status ? "ON" : "OFF") + " OutputVoltage1: " + outputVoltage1
+					+ " OnputVoltage2: " + outputVoltage2 + " IutputVoltage: " + inputVoltage+"Hight voltage");
+		
+		} else {
+
+			System.out.println("status: " + (status ? "ON" : "OFF") + " OutputVoltage1: " + outputVoltage1
+					+ " OnputVoltage2: " + outputVoltage2 + " IutputVoltage: " + inputVoltage);
+		}
+	}
+}

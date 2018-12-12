@@ -1,0 +1,14 @@
+package academy;
+
+public class Boo {
+public static void main(String[] args){
+	String str ="";
+	for(int i =0; i<100;i++){
+		str+=i;
+	}
+	System.out.println(str);
+	StringBuilder sb = new StringBuilder();
+	System.out.println(sb.length());
+	System.out.println(sb.capacity());
+}
+}

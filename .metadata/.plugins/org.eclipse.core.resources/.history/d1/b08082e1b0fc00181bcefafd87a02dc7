@@ -1,0 +1,11 @@
+package mate.acatemy;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CatBox catBox = new CatBox();
+		System.out.println(catBox.width);
+	}
+
+}

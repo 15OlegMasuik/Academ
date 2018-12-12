@@ -1,0 +1,20 @@
+package mate.acatemy;
+
+public class Light {
+	int light=100;
+	boolean state=true;
+
+	void turnOn() {
+		state = true;
+		light=100;
+	}
+
+	void turnOff() {
+		state = false;
+		light=0;
+	}
+	void info(){
+		System.out.println("light: "+ light +" State: "+state);
+	}
+
+}
